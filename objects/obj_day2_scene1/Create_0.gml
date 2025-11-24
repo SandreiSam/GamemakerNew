@@ -36,3 +36,21 @@ player_mood = global.player_mood;
 dialogue_stage = 0;
 
 portrait_sprite = -1; // No sprite by default (instead of noone)
+
+// --- Skip cutscene if returning from minigame ---
+if (variable_global_exists("from_minigame") && global.from_minigame) {
+    global.from_minigame = false;       // reset
+    global.cutscene_active = false;     // skip cutscene
+    
+    // Restore player position
+    if (instance_exists(obj_MC)) {
+        obj_MC.x = global.return_x;
+        obj_MC.y = global.return_y;
+    }
+
+    cutscene_step = -1; // optional: mark cutscene done
+    exit;               // skip the rest of the Create Event
+}
+
+
+

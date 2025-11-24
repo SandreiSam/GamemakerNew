@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_Cardflip",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.9665306,
+  "exportDir":"",
+  "name":"snd_Cardflip",
+  "parent":{
+    "name":"snd_MatchingGame",
+    "path":"folders/Sounds/snd_Minigames/snd_MatchingGame.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_Cardflip.mp3",
+  "volume":1.0,
+}

@@ -1,5 +1,5 @@
 {
-  "$GMSprite":"",
+  "$GMSprite":"v2",
   "%Name":"spr_Profile_CaseyT",
   "bboxMode":0,
   "bbox_bottom":499,
@@ -12,7 +12,7 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"66c14888-1e9c-4de6-b6e1-d6bfa6ec1916","name":"66c14888-1e9c-4de6-b6e1-d6bfa6ec1916","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"66c14888-1e9c-4de6-b6e1-d6bfa6ec1916","name":"66c14888-1e9c-4de6-b6e1-d6bfa6ec1916","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
