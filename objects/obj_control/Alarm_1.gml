@@ -4,7 +4,7 @@ if (lose) {
 	global.level = 1;
 	
 	ds_map_add(global.rooms_played_minigame, string(global.return_room), true);
-    room_goto(global.return_room);
+    room_goto(YouLose);
 }
 
 if (win) {
@@ -13,5 +13,5 @@ if (win) {
 	global.player_mood += 1;
 	
 	ds_map_add(global.rooms_played_minigame, string(global.return_room), true);
-    room_goto(global.return_room);
+    room_goto(YouWin);
 }

@@ -7,16 +7,20 @@ if (global.show_found_text) {
     }
 }
 
-// Check if all items are found
-if (global.items_found >= 5) {
+// ✅ Check if all items are found AND minigame is not yet locked
+if (global.items_found >= 5 && !global.find_item_done) {
 
-    // ⭐ Add 1 point to player mood
+    // ✅ Lock the minigame forever
+    global.find_item_done = true;
+
+    // ✅ Add 1 point to player mood safely
     if (variable_global_exists("player_mood")) {
         global.player_mood += 1;
     } else {
-        global.player_mood = 1; // safety fallback
+        global.player_mood = 1;
     }
 
-    global.from_minigame = true; // flag to handle returning
-    room_goto(global.return_room); // automatically go back to story room
+    // ✅ Return safely to story room
+    global.from_minigame = true;
+    room_goto(global.return_room);
 }
