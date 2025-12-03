@@ -28,6 +28,10 @@ if (player_is_close && keyboard_check_pressed(ord("E"))) {
     global.return_x = obj_MC.x;
     global.return_y = obj_MC.y;
 
+	// Reset minigame variables for a fresh start
+    global.level = 1;
+    global.from_minigame = false;
+
     // Go to the mini-game room
     room_goto(Matching_Game);
 }
