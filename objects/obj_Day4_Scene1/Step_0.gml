@@ -37,8 +37,8 @@ if (global.dialogue_visible) {
 // Dialogue
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
-    current_dialogue = "I wake up feeling like I didn’t dream at all—just floating in a dark place between yesterday and today.";
-    portrait_sprite = 0;
+    current_dialogue = "I wake up feeling like I didn't dream at all-just floating in a dark place between yesterday and today.";
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {

@@ -33,31 +33,31 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "When I open my door, the shouting dies instantly.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I walk out of my room, and there they are.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Mom";
     current_dialogue = "Good morning, sweetheart.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_Mother;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Dad";
     current_dialogue = "Morning. Did you sleep okay?";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_Father;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Their smiles are fake. Thin and trembling at the edges.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 5;
@@ -67,7 +67,6 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
         choice_options = ["Ignore them", "Snap at them"];
         choice_selected = 0;
         choice_active = true;
-        portrait_sprite = 0;
     } else if (choice_active) {
         if (keyboard_check_pressed(ord("S"))) choice_selected = (choice_selected + 1) % array_length(choice_options);
         if (keyboard_check_pressed(ord("W"))) choice_selected = (choice_selected - 1 + array_length(choice_options)) % array_length(choice_options);
@@ -76,12 +75,18 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
             choice_made = true;
             choice_active = false;
             dialogue_speaker = "You";
-            portrait_sprite = 0;
             current_dialogue = choice_options[choice_selected];
             global.dialogue_visible = true;
             
-            if (choice_selected == 0) global.player_mood += 0;
-            else if (choice_selected == 1) global.player_mood -= 1;
+            if (choice_selected == 0) {
+			global.player_mood += 0;
+			portrait_sprite = spr_Profile_MC;
+			}
+			else if (choice_selected == 1) {
+			global.player_mood -= 1;
+			portrait_sprite = spr_Profile_MCA;
+			}
+
             
             reset_typewriter();
             dialogue_stage = 6;
@@ -94,7 +99,7 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_stage = 8;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I head out the door with my chest feeling tight and heavy.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 8 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {

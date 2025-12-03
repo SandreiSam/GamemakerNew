@@ -33,32 +33,32 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "During the short break between classes, I slip out to the side hallway where almost no one goes.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I just need a second.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Inner thought";
     current_dialogue = "My hands feel cold. My shoulders feel tight.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I lean against the wall and close my eyes.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "And then—";
-    portrait_sprite = 0;
+    current_dialogue = "And then-";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
@@ -81,39 +81,39 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_stage = 8;
     dialogue_speaker = "Teacher";
     current_dialogue = "Lia?";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_TeacherT;
 	global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 8 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 9;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I open my eyes to see my homeroom teacher standing a few feet away.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 9 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 10;
     dialogue_speaker = "Teacher";
-    current_dialogue = "You’ve been quieter than usual lately. And you looked upset yesterday.";
-    portrait_sprite = 0;
+    current_dialogue = "You've been quieter than usual lately. And you looked upset yesterday.";
+    portrait_sprite = spr_Profile_TeacherC;
     reset_typewriter();
 } else if (dialogue_stage == 10 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 11;
     dialogue_speaker = "Teacher";
     current_dialogue = "Is something going on at home?";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_TeacherC;
     reset_typewriter();
 } else if (dialogue_stage == 11 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 12;
     dialogue_speaker = "Inner thought";
     current_dialogue = "My breath catches.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 12 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 13;
     global.dialogue_visible = false;
 } else if (dialogue_stage == 13) {
     if (!choice_made && !choice_active) {
-        choice_options = ["Admit you’ve been stressed, but keep it vague", "Say you’re fine / it’s nothing", "Get defensive and say it's personal"];
+        choice_options = ["Admit you've been stressed, but keep it vague", "Say you're fine / it's nothing", "Get defensive and say it's personal"];
         choice_selected = 0;
         choice_active = true;
         portrait_sprite = 0;
@@ -129,9 +129,18 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
             current_dialogue = choice_options[choice_selected];
             global.dialogue_visible = true;
             
-            if (choice_selected == 0) global.player_mood += 1;
-            else if (choice_selected == 1) global.player_mood += 0;
-            else if (choice_selected == 2) global.player_mood -= 1;
+            if (choice_selected == 0){
+				global.player_mood += 1;
+				portrait_sprite = spr_Profile_MCEX;
+			}
+            else if (choice_selected == 1){
+				global.player_mood += 0;
+				portrait_sprite = spr_Profile_MCH;
+			}
+            else if (choice_selected == 2){ 
+				global.player_mood -= 1;
+				portrait_sprite = spr_Profile_MCA;
+			}
             
             reset_typewriter();
             dialogue_stage = 14;
@@ -140,14 +149,14 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
 } else if (dialogue_stage == 14 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 15;
     dialogue_speaker = "Teacher";
-    current_dialogue = "Just remember, you don’t have to deal with things alone. We’re here if you need support.";
-    portrait_sprite = 0;
+    current_dialogue = "Just remember, you don't have to deal with things alone. We're here if you need support.";
+    portrait_sprite = spr_Profile_TeacherC;
     reset_typewriter();
 } else if (dialogue_stage == 15 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 16;
     dialogue_speaker = "Inner thought";
     current_dialogue = "They leave me in the hallway, the echo of their kindness lingering a little too heavily.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 16 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

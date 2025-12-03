@@ -1,21 +1,33 @@
-// In obj_interactive_door -> Step Event
+// If the minigame was played in this room, disable interaction
+if (variable_global_exists("rooms_played_minigame")) {
+    if (ds_map_exists(global.rooms_played_minigame, string(room))) {
+        // optional: set a flag used by Draw to show "Completed"
+        player_is_close = false;
+        // if you want to show a visual "Completed" mark, set a flag:
+        completed_in_this_room = true;
+        exit; // don't run the rest of the Step (no interaction)
+    } else {
+        completed_in_this_room = false;
+    }
+} else {
+    completed_in_this_room = false;
+}
 
-// First, check if the player object is colliding with this door.
-// We use place_meeting, which is a common way to check for collisions.
-if (place_meeting(x, y - 10, obj_MC)) {
+// Check distance between the door and the player
+if (distance_to_object(obj_MC) < 30) {
     player_is_close = true;
 } else {
     player_is_close = false;
 }
 
-// Now, if the player IS close and they press the 'E' key...
-// keyboard_check_pressed ensures this only fires once per key press.
+// If player is close AND presses E
 if (player_is_close && keyboard_check_pressed(ord("E"))) {
-    
+
+    // Save the player's return location
     global.return_room = room;
     global.return_x = obj_MC.x;
     global.return_y = obj_MC.y;
 
+    // Go to the mini-game room
     room_goto(Matching_Game);
 }
-

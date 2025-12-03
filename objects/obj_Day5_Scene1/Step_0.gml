@@ -33,20 +33,20 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "I wake up with a hollow feeling in my chest.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "The house is quiet again, but this time it doesn’t feel like waiting.";
-    portrait_sprite = 0;
+    current_dialogue = "The house is quiet again, but this time it doesn't feel like waiting.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Inner thought";
     current_dialogue = "It feels like something has already happened.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

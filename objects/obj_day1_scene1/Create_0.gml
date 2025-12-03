@@ -35,4 +35,4 @@ player_mood = global.player_mood;
 // Helper
 dialogue_stage = 0;
 
-portrait_sprite = -1; // No sprite by default (instead of noone)
+var portrait_sprite = -1; // No sprite by default (instead of noone)

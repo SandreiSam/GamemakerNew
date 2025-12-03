@@ -33,7 +33,7 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "The school hallway is loud but its a normal loud. Not like home.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
@@ -51,14 +51,14 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     // Wait for MC to stop, then dialogue
     dialogue_speaker = "Inner thought";
     current_dialogue = "Casey, a friend of mine, sees me almost immediately.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Casey";
     current_dialogue = "Lia! Wait up!";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_CaseyT;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
@@ -75,26 +75,26 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     // Wait for Casey to stop, then dialogue
     dialogue_speaker = "Casey";
     current_dialogue = "Liaaa! Oh my gosh, today's the day. Test papers.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_CaseyT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 6;
     dialogue_speaker = "Casey";
-    current_dialogue = "If I fail, you’re legally required to carry me to the nurse. I don’t make the rules.";
-    portrait_sprite = 0;
+    current_dialogue = "If I fail, you're legally required to carry me to the nurse. I don't make the rules.";
+    portrait_sprite = spr_Profile_CaseyT;
     reset_typewriter();
 } else if (dialogue_stage == 6 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 7;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "I try to react, but whatever expression I give tells her something’s off.";
-    portrait_sprite = 0;
+    current_dialogue = "I try to react, but whatever expression I give tells her something's off.";
+    portrait_sprite =  spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 7 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 8;
     dialogue_speaker = "Casey";
-    current_dialogue = "Hey… you okay?";
-    portrait_sprite = 0;
+    current_dialogue = "Hey... you okay?";
+    portrait_sprite = spr_Profile_CaseyT;
     reset_typewriter();
 } else if (dialogue_stage == 8 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
@@ -105,7 +105,6 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
         choice_options = ["Keep quiet", "Snap at her"];
         choice_selected = 0;
         choice_active = true;
-        portrait_sprite = 0;
     } else if (choice_active) {
         if (keyboard_check_pressed(ord("S"))) choice_selected = (choice_selected + 1) % array_length(choice_options);
         if (keyboard_check_pressed(ord("W"))) choice_selected = (choice_selected - 1 + array_length(choice_options)) % array_length(choice_options);
@@ -114,12 +113,18 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
             choice_made = true;
             choice_active = false;
             dialogue_speaker = "You";
-            portrait_sprite = 0;
             current_dialogue = choice_options[choice_selected];
             global.dialogue_visible = true;
             
-            if (choice_selected == 0) global.player_mood += 0;
-            else if (choice_selected == 1) global.player_mood -= 1;
+            if (choice_selected == 0) {
+			global.player_mood += 0;
+			portrait_sprite = spr_Profile_MC;
+			}
+			else if (choice_selected == 1) {
+			global.player_mood -= 1;
+			portrait_sprite = spr_Profile_MCA;
+			}
+
             
             reset_typewriter();
             dialogue_stage = 10; // Move to displaying the selected choice
@@ -129,8 +134,8 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     // Outro Dialogue
     dialogue_stage = 11;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "No matter what I say or don’t she walks with me to class, quietly sticking close.";
-    portrait_sprite = 0;
+    current_dialogue = "No matter what I say or don't she walks with me to class, quietly sticking close.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 11 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

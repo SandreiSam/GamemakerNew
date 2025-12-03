@@ -34,20 +34,20 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Eventually I escaped to my room, closing the door quietly behind me.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
 	global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I let my back slide against the wall until I’m sitting on the floor, knees pulled close.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "It’s only then I realize… I’ve been holding my breath all day.";
-    portrait_sprite = 0;
+    current_dialogue = "It's only then I realize... I've been holding my breath all day.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

@@ -33,7 +33,7 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "When classes end, Casey finds me again.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
@@ -49,51 +49,51 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
 } else if (dialogue_stage == 2 && !global.dialogue_visible && !obj_Casey.is_moving_automatically) {
     dialogue_stage = 3;
     dialogue_speaker = "Casey";
-    current_dialogue = "Hey… test tomorrow. We should study. Even if it’s just for an hour.";
+    current_dialogue = "Hey... test tomorrow. We should study. Even if it's just for an hour.";
 	global.dialogue_visible = true;
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_CaseyT;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Inner thought";
     current_dialogue = "My phone buzzes.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_phonering;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 5;
     dialogue_speaker = "Mom";
     current_dialogue = "Come home early. We need to talk as a family.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_MotherD;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 6;
     dialogue_speaker = "Inner thought";
     current_dialogue = "My stomach twists again.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 6 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 7;
     dialogue_speaker = "Inner thought";
     current_dialogue = "The weight of everything crashes down.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 7 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 8;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Casey watches my expression change.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 8 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 9;
     dialogue_speaker = "Casey";
-    current_dialogue = "You… don’t have to rush home if it’s too much. But I’ll go with you if you want. Or we can stay out here and study. Whatever helps.";
-    portrait_sprite = 0;
+    current_dialogue = "You... don't have to rush home if it's too much. But I'll go with you if you want. Or we can stay out here and study. Whatever helps.";
+    portrait_sprite = spr_Profile_CaseyS;
     reset_typewriter();
 } else if (dialogue_stage == 9 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 10;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "Her voice is steady. She’s trying to be the anchor I can’t be for myself.";
-    portrait_sprite = 0;
+    current_dialogue = "Her voice is steady. She's trying to be the anchor I can't be for myself.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 10 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 11;
@@ -116,9 +116,18 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
             current_dialogue = choice_options[choice_selected];
             global.dialogue_visible = true;
             
-            if (choice_selected == 0) global.player_mood += 1;
-            else if (choice_selected == 1) global.player_mood += 0;
-            else if (choice_selected == 2) global.player_mood -= 1;
+            if (choice_selected == 0){
+				global.player_mood += 1;
+				portrait_sprite = spr_Profile_MCH;
+			}
+            else if (choice_selected == 1){
+				global.player_mood += 0;
+				portrait_sprite = spr_Profile_MC;
+			}
+            else if (choice_selected == 2){
+				global.player_mood -= 1;
+				portrait_sprite = spr_Profile_MCA;
+			}
             
             reset_typewriter();
             dialogue_stage = 12;
@@ -127,14 +136,14 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
 } else if (dialogue_stage == 12 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 13;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "Regardless of the choice, I eventually spend a few minutes outside alone — watching the sky turn orange, listening to the voices fade as students go home.";
-    portrait_sprite = 0;
+    current_dialogue = "Regardless of the choice, I eventually spend a few minutes outside alone - watching the sky turn orange, listening to the voices fade as students go home.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 13 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 14;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "Just… breathing.";
-    portrait_sprite = 0;
+    current_dialogue = "Just... breathing.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 14 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

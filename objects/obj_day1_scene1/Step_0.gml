@@ -33,49 +33,49 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "I wake up before my alarm.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Not because I'm rested. But because of the shouting.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Mom";
     current_dialogue = "Why do you never listen?";
-	portrait_sprite = 0;
+	portrait_sprite = spr_Profile_MotherAT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Dad";
     current_dialogue = "Oh, right because you're always so perfect!";
-	portrait_sprite = 0;
+	portrait_sprite = spr_Profile_FatherAT;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Their voices stab through the walls.";
-	portrait_sprite = 0;
+	portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 5;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I lie there for a moment, staring at the ceiling, letting that familiar hollow feeling spread through my chest.";
-	portrait_sprite = 0;
+	portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 6;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "My alarm finally goes off—like it’s mocking me for thinking it could ever be the thing to wake me up.";
-	portrait_sprite = 0;
+    current_dialogue = "My alarm finally goes off-like it's mocking me for thinking it could ever be the thing to wake me up.";
+	portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 6 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 7;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "I get dressed, brush my hair, pack my bag, moving like I’m underwater.";
-	portrait_sprite = 0;
+    current_dialogue = "I get dressed, brush my hair, pack my bag, moving like I'm underwater.";
+	portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 7 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

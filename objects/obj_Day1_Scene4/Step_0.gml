@@ -32,15 +32,15 @@ if (global.dialogue_visible) {
 // Dialogue
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Professor";
-    current_dialogue = "Settle down, everyone. I’ll be handing these back.";
-    portrait_sprite = 0;
+    current_dialogue = "Settle down, everyone. I'll be handing these back.";
+    portrait_sprite = spr_Profile_TeacherT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "My stomach sinks.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
@@ -63,26 +63,26 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_stage = 5;
     dialogue_speaker = "Inner thought";
     current_dialogue = "When my paper lands on my desk, I freeze. Barely passed. One point above failing.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 6;
     dialogue_speaker = "Inner thought";
     current_dialogue = "It hits harder than I expected. My throat tightens. I try to blink it away, but the disappointment stings behind my eyes.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 6 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 7;
     dialogue_speaker = "Professor";
     current_dialogue = "Lia?";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_TeacherT;
     reset_typewriter();
 } else if (dialogue_stage == 7 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 8;
     dialogue_speaker = "Professor";
     current_dialogue = "You look upset. Is something going on? Do you want to talk after class?";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_TeacherT;
     reset_typewriter();
 } else if (dialogue_stage == 8 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 9;
@@ -101,13 +101,22 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
             choice_made = true;
             choice_active = false;
             dialogue_speaker = "You";
-            portrait_sprite = 0;
             current_dialogue = choice_options[choice_selected];
             global.dialogue_visible = true;
             
-            if (choice_selected == 0) global.player_mood += 1;
-            else if (choice_selected == 1) global.player_mood += 0;
-            else if (choice_selected == 2) global.player_mood -= 1;
+            if (choice_selected == 0) {
+			portrait_sprite = spr_Profile_MCEX;
+			global.player_mood += 1;
+			}
+			else if (choice_selected == 1) {
+			portrait_sprite = spr_Profile_MC;
+			global.player_mood += 0;
+			}
+			else if (choice_selected == 2) {
+			portrait_sprite = spr_Profile_MCA;
+			global.player_mood -= 1;
+			}
+
             
             reset_typewriter();
             dialogue_stage = 10;
@@ -116,14 +125,14 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
 } else if (dialogue_stage == 10 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 11;
     dialogue_speaker = "Professor";
-    current_dialogue = "Alright. Just know I’m here if you need anything.";
-    portrait_sprite = 0;
+    current_dialogue = "Alright. Just know I'm here if you need anything.";
+    portrait_sprite = spr_Profile_TeacherT;
     reset_typewriter();
 } else if (dialogue_stage == 11 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 12;
     dialogue_speaker = "Inner thought";
     current_dialogue = "The rest of class passes in a blur.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 12 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;

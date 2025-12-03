@@ -32,39 +32,39 @@ if (global.dialogue_visible) {
 // Dialogue
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
-    current_dialogue = "When I finally get home, the house feels… heavy, but quieter than usual.";
-    portrait_sprite = 0;
+    current_dialogue = "When I finally get home, the house feels... heavy, but quieter than usual.";
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Mom and Dad are in the living room, quietly watching the television.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Neither says anything about the earlier text. Neither forces a conversation.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Mom";
-    current_dialogue = "You’ve had a long day. Why don’t you rest for a bit?";
-    portrait_sprite = 0;
+    current_dialogue = "You've had a long day. Why don't you rest for a bit?";
+    portrait_sprite = spr_Profile_MotherD;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Dad";
     current_dialogue = "We can talk tomorrow";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_FatherD;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 5;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I nod, quietly grateful.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
 	global.dialogue_visible = false;

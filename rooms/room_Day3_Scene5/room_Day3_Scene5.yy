@@ -9,6 +9,7 @@
     {"name":"inst_1D9DE16F_1_1_1","path":"rooms/room_Day3_Scene5/room_Day3_Scene5.yy",},
     {"name":"inst_53CF296E","path":"rooms/room_Day3_Scene5/room_Day3_Scene5.yy",},
     {"name":"inst_2EC31AA3","path":"rooms/room_Day3_Scene5/room_Day3_Scene5.yy",},
+    {"name":"inst_30DAC731","path":"rooms/room_Day3_Scene5/room_Day3_Scene5.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -16,6 +17,7 @@
         {"$GMRInstance":"v4","%Name":"inst_1D9DE16F_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D9DE16F_1_1_1","objectId":{"name":"obj_MC","path":"objects/obj_MC/obj_MC.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":224.0,"y":208.0,},
         {"$GMRInstance":"v4","%Name":"inst_53CF296E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53CF296E","objectId":{"name":"obj_Teacher","path":"objects/obj_Teacher/obj_Teacher.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":320.0,},
         {"$GMRInstance":"v4","%Name":"inst_2EC31AA3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2EC31AA3","objectId":{"name":"obj_Day3_Scene5","path":"objects/obj_Day3_Scene5/obj_Day3_Scene5.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":368.0,"y":96.0,},
+        {"$GMRInstance":"v4","%Name":"inst_30DAC731","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30DAC731","objectId":{"name":"obj_Location_Indicator","path":"objects/obj_Location_Indicator/obj_Location_Indicator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":176.0,"y":112.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"High_Interior","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"High_Interior","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":50,"TileCompressedData":[
           -456,-2147483648,-4,0,30,2754,2755,2752,2753,2754,2755,2752,2753,2754,2755,2752,2753,2754,2755,2752,

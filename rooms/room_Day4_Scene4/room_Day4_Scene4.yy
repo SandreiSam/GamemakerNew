@@ -32,6 +32,7 @@
     {"name":"inst_2186A812","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
     {"name":"inst_6856A2DD","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
     {"name":"inst_381E4001","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
+    {"name":"inst_674CA257","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -44,6 +45,7 @@
         {"$GMRInstance":"v4","%Name":"inst_A435F03_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A435F03_1_1_1_1_1","objectId":{"name":"obj_Wall_Collision","path":"objects/obj_Wall_Collision/obj_Wall_Collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.25,"scaleY":4.0,"x":648.0,"y":288.0,},
         {"$GMRInstance":"v4","%Name":"inst_64635834_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_64635834_1_1_1_1_1","objectId":{"name":"obj_Wall_Collision","path":"objects/obj_Wall_Collision/obj_Wall_Collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.25,"scaleY":4.0,"x":152.0,"y":288.0,},
         {"$GMRInstance":"v4","%Name":"inst_2A88671F_1_1_1_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2A88671F_1_1_1_1_1","objectId":{"name":"obj_Wall_Collision","path":"objects/obj_Wall_Collision/obj_Wall_Collision.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":8.0,"scaleY":0.25,"x":400.0,"y":152.0,},
+        {"$GMRInstance":"v4","%Name":"inst_674CA257","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_674CA257","objectId":{"name":"obj_Location_Indicator","path":"objects/obj_Location_Indicator/obj_Location_Indicator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":144.0,},
       ],"layers":[],"name":"Collision","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":false,},
     {"$GMRTileLayer":"","%Name":"High_Interior","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"High_Interior","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":50,"TileCompressedData":[
           -861,-2147483648,11,5228,5229,-2147483648,5228,5229,-2147483648,5228,5229,-2147483648,5228,5229,-6,-2147483648,

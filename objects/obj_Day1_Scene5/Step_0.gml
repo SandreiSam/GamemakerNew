@@ -33,38 +33,38 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "When I get home, the living room feels staged.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "My parents sit together on the couch, too still, too calm.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Something inside me sinks.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Mom";
-    current_dialogue = "Lia… we want to talk to you.";
-    portrait_sprite = 0;
+    current_dialogue = "Lia... we want to talk to you.";
+    portrait_sprite = spr_Profile_MotherD;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Dad";
-    current_dialogue = "It won’t take long.";
-    portrait_sprite = 0;
+    current_dialogue = "It won't take long.";
+    portrait_sprite = spr_Profile_FatherD;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 5;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I suddenly feel exhausted.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 6;
@@ -83,12 +83,18 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
             choice_made = true;
             choice_active = false;
             dialogue_speaker = "You";
-            portrait_sprite = 0;
             current_dialogue = choice_options[choice_selected];
             global.dialogue_visible = true;
             
-            if (choice_selected == 0) global.player_mood += 0;
-            else if (choice_selected == 1) global.player_mood -= 1;
+            if (choice_selected == 0) {
+			global.player_mood += 0;
+			portrait_sprite = spr_Profile_MC;
+			}
+			else if (choice_selected == 1) {
+			global.player_mood -= 1;
+			portrait_sprite = spr_Profile_MCA;
+			}
+
             
             reset_typewriter();
             dialogue_stage = 7;

@@ -1,4 +1,7 @@
-// obj_control → Create Event
+if (!variable_global_exists("rooms_played_minigame")) {
+    global.rooms_played_minigame = ds_map_create();
+}
+
 win = false;
 lose = false;
 

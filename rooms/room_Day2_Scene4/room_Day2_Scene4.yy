@@ -24,6 +24,7 @@
     {"name":"inst_21F6B39C","path":"rooms/room_Day2_Scene4/room_Day2_Scene4.yy",},
     {"name":"inst_1D545A1F","path":"rooms/room_Day2_Scene4/room_Day2_Scene4.yy",},
     {"name":"inst_16A96C4E","path":"rooms/room_Day2_Scene4/room_Day2_Scene4.yy",},
+    {"name":"inst_17C70F3A","path":"rooms/room_Day2_Scene4/room_Day2_Scene4.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -59,6 +60,7 @@
         {"$GMRInstance":"v4","%Name":"inst_21F6B39C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_21F6B39C","objectId":{"name":"obj_Day2_Scene4","path":"objects/obj_Day2_Scene4/obj_Day2_Scene4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":368.0,"y":64.0,},
         {"$GMRInstance":"v4","%Name":"inst_1D545A1F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D545A1F","objectId":{"name":"obj_Casey_BackIdle","path":"objects/obj_Casey_BackIdle/obj_Casey_BackIdle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":352.0,},
         {"$GMRInstance":"v4","%Name":"inst_16A96C4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16A96C4E","objectId":{"name":"obj_MC_BackIdle","path":"objects/obj_MC_BackIdle/obj_MC_BackIdle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":464.0,"y":352.0,},
+        {"$GMRInstance":"v4","%Name":"inst_17C70F3A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_17C70F3A","objectId":{"name":"obj_Location_Indicator","path":"objects/obj_Location_Indicator/obj_Location_Indicator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":96.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Mid_Interior","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Mid_Interior","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":50,"TileCompressedData":[
           -861,-2147483648,11,5756,5757,-2147483648,5756,5757,-2147483648,5756,5757,-2147483648,5756,5757,-6,-2147483648,

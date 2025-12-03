@@ -32,45 +32,45 @@ if (global.dialogue_visible) {
 // Dialogue
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
-    current_dialogue = "When I step into the kitchen, Mom and Dad are both there, but they’re not talking. They’re just… coexisting.";
-    portrait_sprite = 0;
+    current_dialogue = "When I step into the kitchen, Mom and Dad are both there, but they're not talking. They're just... coexisting.";
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Mom stirs something on the stove. Dad scrolls on his phone.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Inner thought";
     current_dialogue = "They look up when I enter.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Mom";
     current_dialogue = "Morning, sweetheart.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_Mother;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Dad";
-    current_dialogue = "…Morning.";
-    portrait_sprite = 0;
+    current_dialogue = "...Morning.";
+    portrait_sprite = spr_Profile_Father;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 5;
     dialogue_speaker = "Inner thought";
     current_dialogue = "Their voices sound tired, like they stayed up talking. Or fighting. Or both.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 5 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 6;
     dialogue_speaker = "Inner thought";
-    current_dialogue = "I grab a quick breakfast and leave, pretending I don’t feel their eyes following me as I walk out the door.";
-    portrait_sprite = 0;
+    current_dialogue = "I grab a quick breakfast and leave, pretending I don't feel their eyes following me as I walk out the door.";
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 6 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
