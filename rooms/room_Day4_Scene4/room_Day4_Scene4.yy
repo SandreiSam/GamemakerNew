@@ -33,6 +33,7 @@
     {"name":"inst_6856A2DD","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
     {"name":"inst_381E4001","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
     {"name":"inst_674CA257","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
+    {"name":"inst_301E64DA","path":"rooms/room_Day4_Scene4/room_Day4_Scene4.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -79,6 +80,7 @@
         {"$GMRInstance":"v4","%Name":"inst_2186A812","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2186A812","objectId":{"name":"obj_Day4_Scene4","path":"objects/obj_Day4_Scene4/obj_Day4_Scene4.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":112.0,},
         {"$GMRInstance":"v4","%Name":"inst_6856A2DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6856A2DD","objectId":{"name":"obj_Casey_BackIdle","path":"objects/obj_Casey_BackIdle/obj_Casey_BackIdle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":352.0,},
         {"$GMRInstance":"v4","%Name":"inst_381E4001","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_381E4001","objectId":{"name":"obj_MC_BackIdle","path":"objects/obj_MC_BackIdle/obj_MC_BackIdle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":464.0,"y":352.0,},
+        {"$GMRInstance":"v4","%Name":"inst_301E64DA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_301E64DA","objectId":{"name":"obj_day_indicator","path":"objects/obj_day_indicator/obj_day_indicator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.2,"scaleY":0.136,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Mid_Interior","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Mid_Interior","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":50,"TileCompressedData":[
           -861,-2147483648,11,5756,5757,-2147483648,5756,5757,-2147483648,5756,5757,-2147483648,5756,5757,-6,-2147483648,

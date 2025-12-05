@@ -1,20 +1,30 @@
-// In obj_interactive_door -> Step Event
-
-// Check distance between the door and the player
+// Check distance between player and book
 if (distance_to_object(obj_MC) < 30) {
     player_is_close = true;
 } else {
     player_is_close = false;
 }
 
-// If player is close AND presses E
-if (player_is_close && keyboard_check_pressed(ord("E"))) {
+// Only allow interaction if book is NOT finished
+if (!global.book_mini_game_finished) {
 
-    // Save return position
-    global.return_room = room;
-    global.return_x = obj_MC.x;
-    global.return_y = obj_MC.y;
+    if (player_is_close && keyboard_check_pressed(ord("E"))) {
 
-    // Go to quiz room
-    room_goto(Fun_Quiz_1);
+        // Save return position
+        global.return_room = room;
+        global.return_x = obj_MC.x;
+        global.return_y = obj_MC.y;
+
+        // Start the quiz chain at Fun_Quiz_1
+        room_goto(Fun_Quiz_1);
+
+        // Create quiz controller if it doesn't exist
+        if (!instance_exists(obj_quiz_controller)) {
+            instance_create_layer(0, 0, "Instances", obj_quiz_controller);
+        }
+    }
+
+} else {
+    // Book finished → cannot interact
+    player_is_close = false;
 }

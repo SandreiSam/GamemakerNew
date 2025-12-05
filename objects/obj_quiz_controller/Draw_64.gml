@@ -1,46 +1,87 @@
-// obj_quiz_controller - Draw GUI (fixed)
+// obj_quiz_controller - Draw GUI
 
-if (show_correct) {
-    // popup background
-    var popup_w = 520;
-    var popup_h = 160;
-    var popup_x = (room_width - popup_w) / 2;
-    var popup_y = (room_height - popup_h) / 2;
+// Only show instructions in quiz rooms
+if (room == Fun_Quiz_1 || room == Fun_Quiz_2 || room == Fun_Quiz_3) {
 
-    draw_set_alpha(0.85);
-    draw_rectangle(popup_x, popup_y, popup_x + popup_w, popup_y + popup_h, false); // filled rect
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+
+    // --- Instruction bar (dark translucent box) ---
+    var instr_w = room_width * 0.8;
+    var instr_h = 46;
+    var instr_x = (room_width - instr_w)/2;
+    var instr_y = room_height - 180;
+
+    // dark translucent background for instructions
+    draw_set_color(make_color_rgb(10,10,10));
+    draw_set_alpha(0.6);
+    draw_rectangle(instr_x, instr_y, instr_x + instr_w, instr_y + instr_h, false);
+
+    // instruction text (white)
     draw_set_alpha(1);
+    draw_set_color(c_white);
+    draw_text(instr_x + instr_w/2, instr_y + instr_h/2, 
+        "Press A / B / C to choose. After Correct: press SPACE to continue.");
 
+    // Reset align
     draw_set_halign(fa_center);
-    draw_text(room_width / 2, popup_y + 38, "Correct!");
-    draw_set_halign(fa_left);
+    draw_set_valign(fa_middle);
+}
 
-    // message
-    draw_set_halign(fa_center);
-    draw_text(room_width / 2, popup_y + 72, "Tap Next to continue.");
-    draw_set_halign(fa_left);
+// --- POPUP OVERLAY (dark overlay behind popup to make it visible always) ---
+if (show_correct || show_wrong) {
+    // semi-dark full-screen overlay
+    draw_set_color(make_color_rgb(0,0,0));
+    draw_set_alpha(0.5);
+    draw_rectangle(0, 0, room_width, room_height, false);
+    draw_set_alpha(1);
+}
 
-    if (next_button_active) {
-        // draw Next button (use the button coords you created in Create)
-        draw_set_halign(fa_center);
-        draw_rectangle(button_x, button_y, button_x + button_w, button_y + button_h, false);
-        draw_text(button_x + button_w / 2, button_y + button_h / 2 - 8, "Next");
-        draw_set_halign(fa_left);
+// --- Correct popup (green) ---
+if (show_correct) {
+    var pw = min(700, room_width * 0.75);
+    var ph = 180;
+    var px = (room_width - pw)/2;
+    var py = (room_height - ph)/2;
+
+    // popup background (light green)
+    draw_set_color(make_color_rgb(200,255,200));
+    draw_rectangle(px, py, px+pw, py+ph, false);
+
+    // border
+    draw_set_color(c_black);
+    draw_rectangle(px, py, px+pw, py+ph, true);
+
+    // text
+    draw_set_color(c_black);
+    draw_text(px + pw/2, py + 44, "Correct!");
+
+    if (on_last_correct) {
+        draw_text(px + pw/2, py + 92, "Nice! Press SPACE to finish.");
+    } else {
+        draw_text(px + pw/2, py + 92, "Press SPACE to go to the next question.");
     }
 }
 
+// --- Wrong popup (red) ---
 if (show_wrong) {
-    var popup2_w = 420;
-    var popup2_h = 120;
-    var popup2_x = (room_width - popup2_w) / 2;
-    var popup2_y = (room_height - popup2_h) / 2;
+    var pw2 = min(640, room_width * 0.65);
+    var ph2 = 140;
+    var px2 = (room_width - pw2)/2;
+    var py2 = (room_height - ph2)/2;
 
-    draw_set_alpha(0.85);
-    draw_rectangle(popup2_x, popup2_y, popup2_x + popup2_w, popup2_y + popup2_h, false);
-    draw_set_alpha(1);
+    draw_set_color(make_color_rgb(255,200,200));
+    draw_rectangle(px2, py2, px2+pw2, py2+ph2, false);
+    draw_set_color(c_black);
+    draw_rectangle(px2, py2, px2+pw2, py2+ph2, true);
 
-    draw_set_halign(fa_center);
-    draw_text(room_width / 2, popup2_y + 42, "Wrong answer.");
-    draw_text(room_width / 2, popup2_y + 76, "Try again.");
-    draw_set_halign(fa_left);
+    draw_set_color(c_black);
+    draw_text(px2 + pw2/2, py2 + 44, "Wrong answer.");
+    draw_text(px2 + pw2/2, py2 + 92, "Press SPACE to try again.");
 }
+
+// restore defaults
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_alpha(1);
+draw_set_color(c_white);

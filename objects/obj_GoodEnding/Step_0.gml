@@ -148,5 +148,5 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
 } else if (dialogue_stage == 18 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
     global.cutscene_active = false;
-    room_goto(room_Home_Page);
+    room_goto(room_TheEnd_Indicator);
 }

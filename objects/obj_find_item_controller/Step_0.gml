@@ -22,5 +22,6 @@ if (global.items_found >= 5 && !global.find_item_done) {
 
     // ✅ Return safely to story room
     global.from_minigame = true;
-    room_goto(global.return_room);
+    // Go to "You Win" screen instead of directly returning
+    room_goto(YouWin); // replace rm_YouWin with the actual room name you created
 }

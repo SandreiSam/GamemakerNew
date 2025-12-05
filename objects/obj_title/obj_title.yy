@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_choice_parent",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_title",
+  "eventList":[],
   "managed":true,
-  "name":"obj_choice_parent",
+  "name":"obj_title",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_FunQuiz",
-    "path":"folders/Objects/MiniGame Objects/obj_FunQuiz.yy",
+    "name":"Home Page Objects",
+    "path":"folders/Objects/Home Page Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_title",
+    "path":"sprites/spr_title/spr_title.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

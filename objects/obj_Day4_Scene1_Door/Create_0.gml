@@ -5,3 +5,4 @@ player_is_close = false;
 
 // This is the text that will appear above the door.
 prompt_text = "[E] Interact";
+

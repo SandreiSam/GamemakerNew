@@ -6,5 +6,5 @@ if (mouse_check_button_pressed(mb_left) &&
     global.find_item_done = true;
 
     global.from_minigame = true; // optional flag
-    room_goto(global.return_room); // return to story room
+    room_goto(YouLose); // replace rm_YouLose with your room
 }
