@@ -10,7 +10,7 @@ if (lose) {
 if (win) {
     show_debug_message("You Win All Levels!");
 	global.from_minigame = true;
-	global.player_mood += 1;
+	global.player_mood += 3;
 	
 	ds_map_add(global.rooms_played_minigame, string(global.return_room), true);
     room_goto(YouWin);

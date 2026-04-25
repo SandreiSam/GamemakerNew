@@ -148,11 +148,5 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
 } else if (dialogue_stage == 14 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
     global.cutscene_active = false;
-    if (global.player_mood == 21) {
-        room_goto(room_GoodEnding_Indicator);
-    } else if (global.player_mood > 14 && global.player_mood < 21) {
-        room_goto(room_NeutralEnding_Indicator);
-    } else {
-        room_goto(room_BadEnding_Indicator);
-    }
+    room_goto(Summary_Day5);
 }

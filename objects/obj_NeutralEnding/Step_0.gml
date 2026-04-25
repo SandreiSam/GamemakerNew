@@ -33,32 +33,32 @@ if (global.dialogue_visible) {
 if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_speaker = "Inner thought";
     current_dialogue = "When I get home, Mom and Dad are in the living room again.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 0 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 1;
     dialogue_speaker = "Inner thought";
     current_dialogue = "They look tired, but peaceful enough.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 1 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 2;
     dialogue_speaker = "Mom";
     current_dialogue = "Hey, sweetie... we won't keep you long.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_Mother;
     reset_typewriter();
 } else if (dialogue_stage == 2 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 3;
     dialogue_speaker = "Dad";
     current_dialogue = "We're still trying to decide what's best.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_Father;
     reset_typewriter();
 } else if (dialogue_stage == 3 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 4;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I nod slowly, not sure what to say.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 4 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
@@ -88,41 +88,41 @@ if (dialogue_stage == 0 && !global.dialogue_visible) {
     dialogue_stage = 9;
     dialogue_speaker = "Mom";
     current_dialogue = "We're not separating yet. We just... need space to think.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_MotherD;
 	global.dialogue_visible = true;
     reset_typewriter();
 } else if (dialogue_stage == 9 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 10;
     dialogue_speaker = "Dad";
     current_dialogue = "We don't want you to worry more than you have to.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_FatherD;
     reset_typewriter();
 } else if (dialogue_stage == 10 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 11;
     dialogue_speaker = "Inner thought";
     current_dialogue = "There's no anger. But no comfort either. Just... uncertainty.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 11 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 12;
     dialogue_speaker = "Mom";
     current_dialogue = "One day at a time, okay?";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_Mother;
     reset_typewriter();
 } else if (dialogue_stage == 12 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 13;
     dialogue_speaker = "Inner thought";
     current_dialogue = "I go to my room, unsure of what tomorrow brings, but relieved it isn't crashing down today.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_IT;
     reset_typewriter();
 } else if (dialogue_stage == 13 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     dialogue_stage = 14;
     dialogue_speaker = "Narration";
     current_dialogue = "Lia's family isn't fixed, but it isn't falling apart completely. She has space to breathe, but not peace. Hope exists-but it's fragile.";
-    portrait_sprite = 0;
+    portrait_sprite = spr_Profile_MCEX;
     reset_typewriter();
 } else if (dialogue_stage == 14 && keyboard_check_pressed(vk_space) && typewriter_index >= string_length(current_dialogue)) {
     global.dialogue_visible = false;
     global.cutscene_active = false;
-    room_goto(room_TheEnd_Indicator);
+    room_goto(Summary_NeutralEnd);
 }

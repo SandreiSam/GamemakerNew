@@ -10,5 +10,5 @@ if (distance_to_object(obj_MC) < 30) {
 
 // If player is close AND presses E
 if (player_is_close && keyboard_check_pressed(ord("E"))) {
-    room_goto(room_Day5);
+    room_goto(Summary_Day4);
 }

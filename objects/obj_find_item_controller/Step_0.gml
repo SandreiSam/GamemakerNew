@@ -15,7 +15,7 @@ if (global.items_found >= 5 && !global.find_item_done) {
 
     // ✅ Add 1 point to player mood safely
     if (variable_global_exists("player_mood")) {
-        global.player_mood += 1;
+        global.player_mood += 3;
     } else {
         global.player_mood = 1;
     }

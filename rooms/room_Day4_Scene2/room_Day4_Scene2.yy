@@ -20,6 +20,7 @@
     {"name":"inst_78629BA7","path":"rooms/room_Day4_Scene2/room_Day4_Scene2.yy",},
     {"name":"inst_1A7B0FC6","path":"rooms/room_Day4_Scene2/room_Day4_Scene2.yy",},
     {"name":"inst_401CD3AB","path":"rooms/room_Day4_Scene2/room_Day4_Scene2.yy",},
+    {"name":"inst_5748631A","path":"rooms/room_Day4_Scene2/room_Day4_Scene2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -40,6 +41,7 @@
         {"$GMRInstance":"v4","%Name":"inst_13434FA8_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_13434FA8_1_1","objectId":{"name":"obj_Father","path":"objects/obj_Father/obj_Father.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":208.0,"y":288.0,},
         {"$GMRInstance":"v4","%Name":"inst_78629BA7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_78629BA7","objectId":{"name":"obj_Day4_Scene2","path":"objects/obj_Day4_Scene2/obj_Day4_Scene2.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":400.0,"y":112.0,},
         {"$GMRInstance":"v4","%Name":"inst_401CD3AB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_401CD3AB","objectId":{"name":"obj_day_indicator","path":"objects/obj_day_indicator/obj_day_indicator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.2,"scaleY":0.136,"x":0.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5748631A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5748631A","objectId":{"name":"obj_mood_indicator","path":"objects/obj_mood_indicator/obj_mood_indicator.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":656.0,"y":160.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"High_Interior","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"High_Interior","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":40,"SerialiseWidth":50,"TileCompressedData":[
           -581,-2147483648,4,12936,12937,12938,12939,-3,0,-24,-2147483648,-9,0,-10,-2147483648,4,13068,13069,13070,
@@ -120,7 +122,7 @@
   "name":"room_Day4_Scene2",
   "parent":{
     "name":"Day 4",
-    "path":"folders/Rooms/Day 4.yy",
+    "path":"folders/Rooms/Day 5/Day 4.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

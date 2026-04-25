@@ -18,7 +18,7 @@
   "name":"room_Day4",
   "parent":{
     "name":"Day 4",
-    "path":"folders/Rooms/Day 4.yy",
+    "path":"folders/Rooms/Day 5/Day 4.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -67,7 +67,7 @@ if (show_correct && on_last_correct)
     if (keySpace)
     {
         // Give mood point
-        global.player_mood += 1;
+        global.player_mood += 3;
 
         // Mark book as finished → disables interaction
         global.book_mini_game_finished = true;
